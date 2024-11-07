@@ -1,0 +1,28 @@
+<div>
+    <h1>Tabla Multiplicar Routing</h1>
+    <div *ngIf="numero">
+        <p>Esta el numero {{numero}}</p>
+        <table border="1">
+            <thead>
+                <tr>
+                    <th>Operacion</th>
+                    <th>Resultado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr *ngFor="let num of numeros; let i = index">
+                    <td>
+                        {{numero}} * {{ i + 1}}
+                    </td>
+                    <td>
+                        {{num}}
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    <div *ngIf="!numero">
+        <p>No hay numero por parametro</p>
+    </div>
+
+</div>
